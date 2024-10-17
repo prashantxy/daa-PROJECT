@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h1>Sorting Visualizer</h1>
+    </nav>
+    
+    <main>
+        <section class="controls">
+            <div class="card">
+                <h2>Array Controls</h2>
+                <button class="btn" onclick="generateArray()">Generate New Array</button>
+                <label for="arraySize">Array Size</label>
+                <input type="range" id="arraySize" min="10" max="100" value="50" onchange="updateArraySize(this.value)">
+            </div>
+            <div class="card">
+                <h2>Sorting Algorithm</h2>
+                <label for="algorithm">Choose Algorithm</label>
+                <select id="algorithm">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="quick">Quick Sort</option>
+                    <option value="quick">Insertion Sort</option>
+                </select>
+            </div>
+            <div class="card">
+                <h2>Sorting Speed</h2>
+                <label for="speed">Adjust Speed</label>
+                <input type="range" id="speed" min="1" max="10" value="5">
+            </div>
+            <button class="btn start-btn" onclick="startSort()">Start Sorting</button>
+        </section>
+        
+        <section id="array-container"></section>
+    </main>
+    
+    <footer>
+        <p>Mini Project DAA</p>
+    </footer>
+    
+    <script src="APP.JS"></script>
+</body>
+</html>
